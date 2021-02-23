@@ -5,6 +5,7 @@
   --light: rgb(243, 243, 243);
   --shadow: 0.3rem 0.3rem 0.3rem #000;
   --icon-color: #a79a2d;
+  --button: #888;
 }
 /* end of global variables */
 
@@ -24,6 +25,16 @@
 html {
   font-size: 62.5%;
 }
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--light);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: var(--shadow);
+}
 /* end of common elements */
 
 /* section-1 */
@@ -35,16 +46,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.section-heading{
-  font-size: 12rem;
-  font-weight: 900;
-  color: var(--light);
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: 0.5rem;
-  text-shadow: var(--shadow);
 }
 
 .section-1-icons i{
@@ -63,3 +64,73 @@ html {
 }
 
 /* end of section-1 */
+
+/* section 2  */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+ }
+
+ .cards-container{
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+ .card {
+   width: 30rem;
+   background-color: var(--icon-color);
+   padding: 4rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: var(--shadow);
+   position: relative;
+ }
+
+ .card::before{
+   content: "";
+   height: 100%;
+   width: 1rem;
+   background-color: #817824;
+   position: absolute;
+   top: 0;
+   left: -1rem;
+   transform: skewY(45deg);
+   transform-origin: right;
+   box-shadow: -0.1rem -0.1rem -0.1rem var(--dark);
+ }
+
+ .card-img{
+   width: 100%;
+ }
+
+ .card-name{
+   font-size: 3rem;
+   font-weight: 900;
+   text-transform: uppercase;
+   letter-spacing: 0.5rem;
+   color: var(--dark);
+   margin: 2rem 0;
+   text-shadow: var(--shadow);
+ }
+
+ .card-btn{
+   width: 70%;
+   color: var(--button);
+   background-color: var(--dark);
+   border-radius: 5rem;
+   font-size: 1.5rem;
+   letter-spacing: .2rem;
+   text-transform: capitalize;
+   border: none;
+   padding: 0.5rem 0;
+   cursor: pointer;
+   box-shadow: -0.2rem -0.2rem 0.2rem rgb(0, 0, 0);
+ }
+/* end of section 2  */
