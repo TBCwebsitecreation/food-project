@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,800&display=swap');
+/* global variables */
+:root {
+  --dark: #333;
+  --light: rgb(243, 243, 243);
+  --shadow: 0.3rem 0.3rem 0.3rem #000;
+  --icon-color: #a79a2d;
+}
+/* end of global variables */
+
+/* common elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* list-style-type: none; */
+  outline: none;
+  font-family: 'Nunito',
+  sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* end of common elements */
+
+/* section-1 */
+.section-1{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-heading{
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--light);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: var(--shadow);
+}
+
+.section-1-icons i{
+  font-size: 35rem;
+  color: var(--icon-color);
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: var(--shadow);
+  transition: transform .3s;
+}
+
+.section-1-icons i.change{
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s 0.3s;
+
+}
+
+/* end of section-1 */
