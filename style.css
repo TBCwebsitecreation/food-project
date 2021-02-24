@@ -177,6 +177,7 @@ html {
   0.5rem 0.5rem 0.1rem #a2e946,
   0.7rem 0.7rem 0.1rem #297ce9,
   0.9rem 0.9rem 0.1rem #e92999;  
+  transition: all 0.5s;
 }
 
 .gallery-link {
@@ -184,9 +185,6 @@ html {
   margin: 4rem 1rem;
 }
 
-.gallery-link:hover {
-  
-}
 
 .gallery-link::before{
   content: "";
@@ -196,6 +194,7 @@ html {
   width: 0.2rem;
   height: 0;
   background-color: #fff;
+  z-index: 10;
   transition: height .5s;
 }
 
@@ -218,6 +217,17 @@ html {
   width: 90%;
 }
 
+.gallery-link:hover .food-img{
+  box-shadow: 1rem 1rem 0.1rem #e92929,
+  2rem 2rem 0.1rem #a2e946,
+  3rem 3rem 0.1rem #297ce9,
+  4rem 4rem 0.1rem #e92999;
+  filter: blur(.5rem);
+  opacity: 0.5;
+  transform: scale(1.1);
+
+}
+
 .food-name {
   position: absolute;
   top: 3rem;
@@ -225,10 +235,16 @@ html {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  color:aliceblue;
+  letter-spacing: .1rem;
+  color: white;
   width: 0;
   overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
 }
 
 .food-description {
@@ -236,11 +252,95 @@ html {
   bottom: 3vw;
   left: 2rem;
   width: 70%;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: .1rem;
   text-transform: uppercase;
   color: #fff;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
 }
 /* end of section 3 */
+
+
+/* section 4 */
+.section-4 {
+  width:100%;
+  height: 30vh;
+  background-color: #222;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.section-4-text {
+  text-transform: uppercase;
+}
+
+.section-4-heading{
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--icon-color);
+  text-shadow: var(--shadow)
+}
+
+.section-4-paragraph {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.signup-form{
+  display: flex;
+  align-items: center;
+}
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: #a79a2d;
+}
+
+.signup-form-input::placeholder{
+  color: var(--icon-color);
+}
+
+.signup-form-btn {
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: var(--icon-color);
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+}
+
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color:#eee;
+  letter-spacing: 0.1rem;
+  border-top: .1rem solid #888;
+  padding-top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+/* end of section 4 */
