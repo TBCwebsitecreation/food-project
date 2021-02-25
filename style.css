@@ -199,6 +199,7 @@ html {
    box-shadow: var(--shadow);
    position: relative;
    transform: rotateY(20deg) skewX(-2deg);
+   z-index: 120;
    transition: transform 0.5s, box-shadow 0.5s;
  }
 
